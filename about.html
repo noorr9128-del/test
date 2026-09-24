@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>عن المشروع والمصادر | حرة كما خُلقت</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#F6EFE3; --sand-2:#EDE2CE; --dusk:#2E4156; --horizon:#E4772E;
+    --meadow:#6F8F4E; --ink:#241F19; --ink-soft:#5C5347; --line: rgba(36,31,25,0.14);
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top,0px);
+    padding-bottom: env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --sand:#1D1712; --sand-2:#251E17; --dusk:#D7E2EC; --horizon:#F0925B;
+      --meadow:#9BBB7C; --ink:#EFE7DA; --ink-soft:#BBAF9E; --line: rgba(239,231,218,0.16);
+    }
+  }
+  :root[data-theme="dark"]{
+    --sand:#1D1712; --sand-2:#251E17; --dusk:#D7E2EC; --horizon:#F0925B;
+    --meadow:#9BBB7C; --ink:#EFE7DA; --ink-soft:#BBAF9E; --line: rgba(239,231,218,0.16);
+  }
+  html,body{height:100%;}
+  html{scroll-padding-top: env(safe-area-inset-top,0px);}
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--sand); color:var(--ink); font-family:'Tajawal',sans-serif; line-height:1.75; overflow-x:hidden; }
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{ font-family:'Aref Ruqaa',serif; margin:0 0 .3em; color:var(--dusk); font-weight:700; }
+  .wrap{max-width:980px; margin:0 auto; padding:0 24px;}
+
+  header{ position:sticky; top:0; z-index:30; background:var(--sand); border-bottom:1px solid var(--line); padding-top:env(safe-area-inset-top,0px); }
+  nav.wrap{ display:flex; align-items:center; justify-content:space-between; padding:16px 24px; }
+  .brand{ font-family:'Aref Ruqaa',serif; font-size:1.5rem; color:var(--dusk); }
+  .navlinks{ display:flex; gap:4px; }
+  .navlinks a{ font-family:'Tajawal'; font-size:.95rem; font-weight:500; padding:9px 18px; color:var(--ink-soft); border-bottom:2px solid transparent; }
+  .navlinks a.active{ color:var(--horizon); border-bottom-color:var(--horizon); }
+
+  .about-head{ padding:56px 0 10px; }
+  .about-head p{ color:var(--ink-soft); max-width:52ch; }
+
+  .split{ display:grid; grid-template-columns:1fr 1px 1fr; gap:36px; padding:30px 0 60px; }
+  .split .rule{ background:var(--line); }
+  .split h3{ font-size:1.3rem; }
+  .split .col p{ color:var(--ink-soft); font-size:.98rem; }
+  .split .col ul{ padding-right:20px; margin:0; color:var(--ink-soft); font-size:.95rem; }
+  .split .col li{ margin-bottom:14px; }
+  .split .col li strong{ color:var(--ink); display:block; font-family:'Tajawal'; font-weight:700; }
+
+  .note-box{ background:var(--sand-2); border-right:3px solid var(--horizon); padding:16px 20px; border-radius:2px; font-size:.9rem; color:var(--ink-soft); margin-top:20px; }
+
+  footer{ padding:30px 0 50px; text-align:center; color:var(--ink-soft); font-size:.88rem; }
+
+  @media (max-width:760px){
+    .split{ grid-template-columns:1fr; }
+    .split .rule{ display:none; }
+    nav.wrap{ flex-direction:column; gap:10px; padding:14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">حرة كما خُلقت</div>
+    <div class="navlinks">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html" class="active">عن المشروع والمصادر</a>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <div class="wrap about-head">
+    <h1>عن المشروع والمصادر</h1>
+    <p>هذه الصفحة تشرح فكرة الموقع والهدف منه، وتجمع المصادر التي يمكن الاستناد إليها عند الحديث عن رمزية هذه الكائنات في مفهوم الحرية.</p>
+  </div>
+
+  <div class="wrap split">
+    <div class="col">
+      <h3>فكرة المشروع</h3>
+      <p>يهدف هذا الموقع إلى تقديم مفهوم "الحرية" من زاوية بصرية وغير مباشرة، عبر ربطه بأربعة كائنات من الطبيعة، كل واحد يعبّر عن بُعد مختلف من أبعاد هذا المفهوم: الحركة، الانتقال، التحوّل، والاختيار.</p>
+      <p>الفكرة مبنية على أن المفاهيم المجردة مثل الحرية تُفهم بشكل أعمق حين تُربط بصور محسوسة من العالم من حولنا، بدل تعريفها بشكل نظري بحت.</p>
+      <div class="note-box">هذا القسم قابل للتعديل — يمكن إضافة الهدف من المشروع، المادة الدراسية المرتبط بها، واسمك كمُعِد للمشروع.</div>
+    </div>
+    <div class="rule"></div>
+    <div class="col">
+      <h3>مصادر مقترحة للقراءة</h3>
+      <ul>
+        <li><strong>رمزية الحيوانات في الثقافات المختلفة</strong>مراجع عامة حول كيف مثّلت شعوب مختلفة معاني الحرية والقوة عبر الحيوانات (الحصان والنسر تحديدًا) في الفنون والأساطير.</li>
+        <li><strong>سلوك الطيور المهاجرة</strong>مصادر علمية حول أنماط الهجرة عند الطيور وربطها المجازي بحرية التنقل.</li>
+        <li><strong>مراحل تحوّل الفراشة (Metamorphosis)</strong>مصادر بيولوجية تشرح مراحل التحوّل الكامل، وتُستخدم غالبًا كاستعارة للتغيّر الشخصي.</li>
+        <li><strong>سلوك طيور الحب (Lovebirds)</strong>مصادر حول طبيعة الألفة عند هذا النوع من الطيور، وربطها بفكرة الحرية داخل بيئة آمنة.</li>
+      </ul>
+      <div class="note-box">هذه عناوين مواضيع للاسترشاد بها فقط — يُفضّل استبدالها بمصادر أكاديمية فعلية (كتب، مقالات علمية) توثّقينها حسب أسلوب التوثيق المطلوب في مقررك.</div>
+    </div>
+  </div>
+</section>
+
+<footer>مشروع "حرة كما خُلقت"</footer>
+
+</body>
+</html>
