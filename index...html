@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حرة كما خُلقت</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J91V0YNSSE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J91V0YNSSE');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#F6EFE3; --sand-2:#EDE2CE; --dusk:#2E4156; --horizon:#E4772E;
+    --meadow:#6F8F4E; --ink:#241F19; --ink-soft:#5C5347; --line: rgba(36,31,25,0.14);
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top,0px);
+    padding-bottom: env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --sand:#1D1712; --sand-2:#251E17; --dusk:#D7E2EC; --horizon:#F0925B;
+      --meadow:#9BBB7C; --ink:#EFE7DA; --ink-soft:#BBAF9E; --line: rgba(239,231,218,0.16);
+    }
+  }
+  :root[data-theme="dark"]{
+    --sand:#1D1712; --sand-2:#251E17; --dusk:#D7E2EC; --horizon:#F0925B;
+    --meadow:#9BBB7C; --ink:#EFE7DA; --ink-soft:#BBAF9E; --line: rgba(239,231,218,0.16);
+  }
+  html,body{height:100%;}
+  html{scroll-padding-top: env(safe-area-inset-top,0px);}
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--sand); color:var(--ink); font-family:'Tajawal',sans-serif; line-height:1.75; overflow-x:hidden; }
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{ font-family:'Aref Ruqaa',serif; margin:0 0 .3em; color:var(--dusk); font-weight:700; }
+  .wrap{max-width:980px; margin:0 auto; padding:0 24px;}
+
+  header{ position:sticky; top:0; z-index:30; background:var(--sand); border-bottom:1px solid var(--line); padding-top:env(safe-area-inset-top,0px); }
+  nav.wrap{ display:flex; align-items:center; justify-content:space-between; padding:16px 24px; }
+  .brand{ font-family:'Aref Ruqaa',serif; font-size:1.5rem; color:var(--dusk); }
+  .navlinks{ display:flex; gap:4px; }
+  .navlinks a{ font-family:'Tajawal'; font-size:.95rem; font-weight:500; padding:9px 18px; color:var(--ink-soft); border-bottom:2px solid transparent; }
+  .navlinks a.active{ color:var(--horizon); border-bottom-color:var(--horizon); }
+
+  .hero{ position:relative; padding:70px 0 30px; overflow:hidden; }
+  .hero h1{ font-size:2.9rem; max-width:14ch; }
+  .hero p.lead{ color:var(--ink-soft); max-width:48ch; font-size:1.08rem; margin-top:10px; }
+
+  .horizon-scene{ position:relative; height:230px; margin-top:40px; background: linear-gradient(to bottom, transparent 0%, transparent 62%, var(--sand-2) 62%, var(--sand-2) 100%); }
+  .sun{ position:absolute; top:10px; left:14%; width:70px; height:70px; border-radius:50%; background:var(--horizon); opacity:.85; }
+  .ground-line{ position:absolute; left:0; right:0; top:62%; height:1px; background:var(--line); }
+  #horse-run{ position:absolute; bottom:14px; right:-220px; width:190px; animation: gallop 3.2s ease-out .3s forwards; }
+  @keyframes gallop{ to{ right: 55%; transform:translateX(50%);} }
+  @media (prefers-reduced-motion: reduce){ #horse-run{ animation:none; right:0; transform:none; } }
+
+  .strip{ background:var(--dusk); color:var(--sand); padding:50px 0; margin-top:10px; }
+  .strip .wrap{ text-align:center; }
+  .strip h2{ color:var(--sand); font-size:1.8rem; max-width:30ch; margin:0 auto .3em; }
+  .strip p{ color:var(--sand-2); opacity:.85; max-width:52ch; margin:0 auto; }
+
+  .field{ padding:60px 24px 30px; max-width:980px; margin:0 auto; }
+  .field > h2{ text-align:center; margin-bottom:6px; }
+  .field > p.sub{ text-align:center; color:var(--ink-soft); max-width:44ch; margin:0 auto 40px; }
+  .symbols{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:end; }
+  .symbol{ text-align:center; padding-bottom:6px; }
+  .patch{ width:100%; aspect-ratio:1/0.85; display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+  .patch svg{ width:62%; height:62%; }
+  .symbol h3{ font-size:1.15rem; margin-bottom:4px; }
+  .symbol p{ font-size:.87rem; color:var(--ink-soft); margin:0; }
+  .patch.p1{ background: radial-gradient(ellipse at center, var(--horizon) 0%, transparent 72%); }
+  .patch.p2{ background: radial-gradient(ellipse at center, var(--meadow) 0%, transparent 72%); }
+  .patch.p3{ background: radial-gradient(ellipse at center, var(--dusk) 0%, transparent 72%); opacity:.9;}
+  .patch.p4{ background: radial-gradient(ellipse at center, #C9789A 0%, transparent 72%); }
+
+  .closing{ padding:50px 0 70px; text-align:center; }
+  .closing p{ max-width:50ch; margin:0 auto; color:var(--ink-soft); font-size:1.05rem; }
+  .closing h2{ font-size:1.7rem; }
+
+  footer{ padding:30px 0 50px; text-align:center; color:var(--ink-soft); font-size:.88rem; }
+
+  @media (max-width:760px){
+    .hero h1{ font-size:2.2rem; }
+    .symbols{ grid-template-columns:1fr 1fr; }
+    nav.wrap{ flex-direction:column; gap:10px; padding:14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">حرة كما خُلقت</div>
+    <div class="navlinks">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="about.html">عن المشروع والمصادر</a>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <div class="wrap hero">
+    <h1>الحرية كما ترسمها الطبيعة</h1>
+    <p class="lead">من عدو الخيل في العراء إلى تحوّل الفراشة، تحمل الكائنات من حولنا أشكالًا مختلفة من الحرية — بعضها في الحركة، وبعضها في التحوّل، وبعضها في الاختيار رغم القيد.</p>
+
+    <div class="horizon-scene">
+      <div class="sun"></div>
+      <div class="ground-line"></div>
+      <svg id="horse-run" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="100" cy="108" rx="70" ry="6" fill="var(--ink)" opacity="0.08"/>
+        <path d="M40 90 L45 55 Q50 40 65 38 L110 35 Q130 34 138 48 L145 70 L150 95 L140 96 L135 78 L120 80 L118 96 L108 96 L110 75 L70 78 L60 96 L50 96 L55 80 L44 90 Z" fill="var(--dusk)"/>
+        <path d="M110 35 Q125 20 140 28 Q135 34 130 34 Z" fill="var(--dusk)"/>
+        <line x1="125" y1="30" x2="150" y2="14" stroke="var(--dusk)" stroke-width="4" stroke-linecap="round"/>
+        <line x1="125" y1="34" x2="150" y2="24" stroke="var(--dusk)" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap">
+      <h2>حرية واحدة، بأربع صور مختلفة</h2>
+      <p>كل كائن يعيش نوعًا من الحرية يخصّه، ومجتمعين يرسمون صورة أوسع للمفهوم.</p>
+    </div>
+  </div>
+
+  <div class="field">
+    <h2>أربعة أشكال للحرية</h2>
+    <p class="sub">اختيار مقصود لأربع كائنات، كل واحد يمثل معنى مختلفًا للحرية في الطبيعة.</p>
+
+    <div class="symbols">
+      <div class="symbol">
+        <div class="patch p1">
+          <svg viewBox="0 0 100 100"><path d="M20 70 L25 40 Q28 28 40 26 L65 24 Q80 23 85 34 L88 55 L90 72 L82 73 L79 60 L68 62 L67 73 L58 73 L60 56 L35 58 L28 73 L20 73 Z" fill="var(--horizon)"/></svg>
+        </div>
+        <h3>الحصان</h3>
+        <p>حرية الحركة والانطلاق بلا حدود.</p>
+      </div>
+
+      <div class="symbol">
+        <div class="patch p2">
+          <svg viewBox="0 0 100 100"><path d="M50 20 C35 30 15 30 10 45 C25 42 35 48 50 55 C65 48 75 42 90 45 C85 30 65 30 50 20 Z" fill="var(--meadow)"/><circle cx="50" cy="52" r="5" fill="var(--meadow)"/></svg>
+        </div>
+        <h3>الطير المهاجر</h3>
+        <p>حرية التنقل والعبور بين الأمكنة.</p>
+      </div>
+
+      <div class="symbol">
+        <div class="patch p3">
+          <svg viewBox="0 0 100 100"><path d="M50 30 C40 15 15 15 15 35 C15 50 35 55 50 50 C65 55 85 50 85 35 C85 15 60 15 50 30 Z" fill="var(--dusk)"/><line x1="50" y1="30" x2="50" y2="65" stroke="var(--dusk)" stroke-width="3"/></svg>
+        </div>
+        <h3>الفراشة</h3>
+        <p>حرية التحوّل والتغيّر من حال إلى حال.</p>
+      </div>
+
+      <div class="symbol">
+        <div class="patch p4">
+          <svg viewBox="0 0 100 100"><circle cx="38" cy="45" r="16" fill="#C9789A"/><circle cx="62" cy="45" r="16" fill="#C9789A" opacity="0.85"/><path d="M38 60 Q50 68 62 60" stroke="#C9789A" stroke-width="3" fill="none"/></svg>
+        </div>
+        <h3>طائر الحُب</h3>
+        <p>حرية الاختيار والألفة، حتى داخل الرعاية.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing wrap">
+    <h2>فالحرية ليست شكلًا واحدًا</h2>
+    <p>هي كل هذه المعاني مجتمعة: أن تتحرك كما تشاء، أن تتحوّل حين تحتاج، وأن تختار — حتى حين تكون محاطًا بالرعاية.</p>
+  </div>
+</section>
+
+<footer>مشروع "حرة كما خُلقت"</footer>
+
+</body>
+</html>
